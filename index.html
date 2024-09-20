@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictionary Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Juego de Pictionary</h1>
+    <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
+    <select id="selector">
+        <option value="movies">Películas</option>
+        <option value="animals">Animales</option>
+        <option value="things">Cosas de la Casa</option>
+    </select>
+    <h1 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h1>
+    
+    <div id="app"></div> <!-- This div will contain the timer -->
+
+    <!-- Navbar with buttons -->
+    <nav id="navbar">
+        <div id="button-container">
+            <button id="start-button">Iniciar Tiempo</button>
+            <button id="reset-button">Resetear Tiempo</button>
+            <button id="change-item-button">Cambiar Elemento</button>
+        </div>
+    </nav>
+
+    <!-- Audio element for beep sound -->
+    <audio id="beep-sound" src="beep.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
