@@ -6,7 +6,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #111111; /* Dark background for loading screen */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,33 +21,25 @@
 /* General styling for game elements */
 body {
     font-family: 'Comic Sans MS', cursive;
-    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background */
+    background: #1a1a1a; /* Dark background */
     text-align: center;
     margin: 0;
     padding: 20px;
 }
 
-h1 {
-    font-size: 3em;
-    color: #ffffff;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 2.5em;
-    color: #ffffff;
-    margin: 10px 0;
+h1, h2 {
+    color: #FFFFFF; /* White text */
 }
 
 label {
     font-size: 1.5em;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 #selector {
     font-size: 1.5em;
     padding: 10px;
-    background-color: #FFD700; /* Yellow background for dropdown */
+    background-color: #B565A7; /* Muted Pink background for dropdown */
     color: #000;
     border-radius: 5px;
     margin: 20px 0;
@@ -60,7 +52,7 @@ label {
 }
 
 button {
-    background-color: #40E0D0;
+    background-color: #008B8B; /* Dark Cyan */
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -71,7 +63,7 @@ button {
 }
 
 button:hover {
-    background-color: #00BFFF;
+    background-color: #4682B4; /* Muted Blue */
 }
 
 /* Clock integration styling */
@@ -105,11 +97,11 @@ button:hover {
 }
 
 .base-timer__path-remaining.green {
-    color: #65BAA3; /* Green color for healthy time */
+    color: #65BAA3; /* Subtle green for healthy time */
 }
 
 .base-timer__path-remaining.orange {
-    color: #FF69B4; /* Pink for warning time */
+    color: #B565A7; /* Muted pink for warning time */
 }
 
 .base-timer__path-remaining.red {
@@ -125,12 +117,12 @@ button:hover {
     align-items: center;
     justify-content: center;
     font-size: 48px;
-    color: #ffffff; /* White color for clock text */
+    color: #FFFFFF; /* White color for clock text */
 }
 
 /* Navbar styling for buttons */
 #navbar {
-    background-color: #A349A4;
+    background-color: #4B2C4A; /* Dark Purple for navbar */
     padding: 10px;
     position: sticky;
     top: 0;
@@ -153,7 +145,7 @@ button:hover {
 footer {
     text-align: center;
     margin: 20px 0;
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 1.2em;
 }
 
