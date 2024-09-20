@@ -1,131 +1,46 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background from the color palette */
+    font-family: 'Comic Sans MS', cursive; /* Playful font */
     text-align: center;
+    margin: 0;
     padding: 20px;
 }
 
 h1 {
+    font-size: 3em; /* Large title */
+    color: #ffffff; /* White text */
     margin: 20px 0;
+}
+
+label {
+    font-size: 1.5em; /* Size for the label */
+    color: #ffffff; /* White text */
+}
+
+#selector {
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0; /* Margin around the dropdown */
+    background-color: #FFD700; /* Yellow background */
+    color: #000000; /* Black text */
 }
 
 #item-name {
     font-size: 2.5em;
-    margin: 20px 0;
-    background-color: #ffffff; /* Background white */
-    color: #008080; /* Teal text color */
-    padding: 10px; /* Inner spacing */
-    border-radius: 5px; /* Rounded borders */
+    background-color: #ffffff; /* White background */
+    color: #00BFFF; /* Light blue text */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-select {
-    font-size: 1.5em;
-    margin: 20px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff; /* Background white */
-    color: #000; /* Black text */
-}
-
-button {
-    background-color: #008080; /* Teal color */
-    color: #ffffff;
-    border: none;
-    padding: 15px 30px; /* Increase button size */
-    margin: 10px;
-    cursor: pointer;
-    font-size: 1.2em; /* Increase font size */
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    width: calc(100% - 40px); /* Responsive buttons */
-    max-width: 300px; /* Maximum width */
-}
-
-button:hover {
-    background-color: #005757; /* Darker teal color */
-}
-
-/* Styles for the timer */
 .base-timer {
-    position: relative;
-    width: 300px;
-    height: 300px;
     margin: 20px auto; /* Center the timer */
 }
 
-.base-timer__svg {
-    transform: scaleX(-1);
-}
-
-.base-timer__circle {
-    fill: none;
-    stroke: none;
-}
-
-.base-timer__path-elapsed {
-    stroke-width: 7px;
-    stroke: grey;
-}
-
-.base-timer__path-remaining {
-    stroke-width: 7px;
-    stroke-linecap: round;
-    transform: rotate(90deg);
-    transform-origin: center;
-    transition: 1s linear all;
-    fill-rule: nonzero;
-    stroke: currentColor;
-}
-
-.base-timer__path-remaining.green {
-    color: rgb(65, 184, 131);
-}
-
-.base-timer__path-remaining.orange {
-    color: orange;
-}
-
-.base-timer__path-remaining.red {
-    color: red;
-}
-
-.base-timer__label {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-    button {
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    .base-timer {
-        width: 80%; /* Smaller timer width */
-        height: 80%;
-    }
-}
-
-#button-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Add spacing around the button container */
-}
-
-button {
-    margin: 0 10px; /* Space between buttons */
-}
-
 #navbar {
-    background-color: #008080; /* Teal background for the navbar */
+    background-color: #A349A4; /* Purple background for the navbar */
     padding: 10px; /* Spacing around the navbar */
     position: sticky; /* Keep navbar at the top */
     top: 0; /* Stick to the top of the page */
@@ -134,15 +49,104 @@ button {
 
 #button-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center buttons */
+    margin: 20px 0; /* Margin around the button container */
 }
 
 button {
-    margin: 0 10px; /* Space between buttons */
+    background-color: #40E0D0; /* Cyan color */
     color: #ffffff; /* Button text color */
+    padding: 15px 25px; /* Padding for buttons */
+    font-size: 1.2em; /* Font size for buttons */
+    margin: 0 10px; /* Space between buttons */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    cursor: pointer; /* Change cursor on hover */
 }
 
-/* Optional: Add hover effect for buttons */
 button:hover {
-    background-color: #005757; /* Darker teal on hover */
+    background-color: #00BFFF; /* Light blue on hover */
+}
+
+/* Styles for the timer */
+.base-timer {
+    position: relative; /* Position relative for inner elements */
+    width: 300px; /* Width for the timer */
+    height: 300px; /* Height for the timer */
+    margin: 20px auto; /* Center the timer */
+}
+
+.base-timer__svg {
+    transform: scaleX(-1); /* Flip the SVG */
+}
+
+.base-timer__circle {
+    fill: none; /* No fill for the circle */
+    stroke: none; /* No stroke for the circle */
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px; /* Width of the elapsed path */
+    stroke: grey; /* Color of the elapsed path */
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px; /* Width of the remaining path */
+    stroke-linecap: round; /* Rounded ends for the path */
+    transform: rotate(90deg); /* Start position */
+    transform-origin: center; /* Center the rotation */
+    transition: 1s linear all; /* Smooth transition */
+    fill-rule: nonzero; /* Fill rule */
+    stroke: currentColor; /* Current color for stroke */
+}
+
+.base-timer__path-remaining.green {
+    color: #65BAA3; /* Custom green color for path */
+}
+
+.base-timer__path-remaining.orange {
+    color: #FF69B4; /* Pink for warning */
+}
+
+.base-timer__path-remaining.red {
+    color: #FFD700; /* Yellow for critical */
+}
+
+.base-timer__label {
+    position: absolute; /* Position absolute for label */
+    width: 300px; /* Width for label */
+    height: 300px; /* Height for label */
+    top: 0; /* Align to top */
+    display: flex; /* Flex display */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 48px; /* Font size for timer */
+}
+
+#logo-container {
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px; /* Add some space below the logo */
+}
+
+#logo {
+    width: 100px; /* Adjust the size of the logo (reduced) */
+    height: auto;
+    margin-top: 20px; /* Add some space at the top */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Adjust title size for smaller screens */
+    }
+
+    button {
+        padding: 10px 20px; /* Smaller buttons */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    #item-name {
+        font-size: 2em; /* Adjust item size */
+    }
 }
