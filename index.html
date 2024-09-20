@@ -17,30 +17,34 @@
     <!-- Main Content -->
     <div id="main-content" style="display: none;">
         <h1>PictoPlay</h1>
-        <p>A fun and interactive Pictionary game!</p>
 
         <!-- Game Section -->
-        <section id="game-section">
+        <section id="game-section" class="flex-container">
+            
+            <!-- Left Div: Buttons and Selector -->
+            <div class="left-div">
+                <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
+                <select id="selector">
+                    <option value="movies">Películas</option>
+                    <option value="animals">Animales</option>
+                    <option value="things">Cosas de la Casa</option>
+                </select>
+                <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
 
-            <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
-            <select id="selector">
-                <option value="movies">Películas</option>
-                <option value="animals">Animales</option>
-                <option value="things">Cosas de la Casa</option>
-            </select>
-            <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
+                <!-- Navbar with buttons -->
+                <nav id="navbar">
+                    <div id="button-container">
+                        <button class="button-53" id="start-button" role="button">Iniciar Tiempo</button>
+                        <button class="button-53" id="reset-button" role="button">Resetear Tiempo</button>
+                        <button class="button-53" id="change-item-button" role="button">Cambiar Elemento</button>
+                    </div>
+                </nav>
+            </div>
 
-            <!-- Navbar with buttons -->
-            <nav id="navbar">
-                <div id="button-container">
-                    <button id="start-button">Iniciar Tiempo</button>
-                    <button id="reset-button">Resetear Tiempo</button>
-                    <button id="change-item-button">Cambiar Elemento</button>
-                </div>
-            </nav>
-
-            <!-- Timer (Clock) Section -->
-            <div id="app"></div> <!-- Timer gets loaded here -->
+            <!-- Right Div: Timer (Clock) Section -->
+            <div class="right-div">
+                <div id="app"></div> <!-- Timer gets loaded here -->
+            </div>
         </section>
 
         <!-- Footer Section -->
