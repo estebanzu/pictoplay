@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <title>PictoPlay - Forty Theme</title>
+    <title>PictoPlay - Dark Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- Link to Forty theme CSS and your custom CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="styles.css" /> <!-- Your custom styles -->
+    <!-- Link to your custom dark theme styles -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Ensure this is your custom CSS -->
 </head>
-<body class="is-preload">
+<body>
 
     <!-- Loading Screen -->
     <div id="loading-screen">
@@ -17,46 +16,40 @@
 
     <!-- Main Content -->
     <div id="main-content" style="display: none;">
-        <!-- Banner Section (From Forty theme) -->
-
+        <h1>PictoPlay</h1>
+        <p>A fun and interactive Pictionary game!</p>
 
         <!-- Game Section -->
         <section id="game-section">
-            <div class="inner">
-                
-                <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
-                <select id="selector">
-                    <option value="movies">Películas</option>
-                    <option value="animals">Animales</option>
-                    <option value="things">Cosas de la Casa</option>
-                </select>
-                <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
 
-                <!-- Navbar with buttons -->
-                <nav id="navbar">
-                    <div id="button-container">
-                        <button id="start-button">Iniciar Tiempo</button>
-                        <button id="reset-button">Resetear Tiempo</button>
-                        <button id="change-item-button">Cambiar Elemento</button>
-                    </div>
-                </nav>
+            <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
+            <select id="selector">
+                <option value="movies">Películas</option>
+                <option value="animals">Animales</option>
+                <option value="things">Cosas de la Casa</option>
+            </select>
+            <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
 
-                <!-- Timer (Clock) Section -->
-                <div id="app"></div> <!-- Timer gets loaded here -->
-            </div>
+            <!-- Navbar with buttons -->
+            <nav id="navbar">
+                <div id="button-container">
+                    <button id="start-button">Iniciar Tiempo</button>
+                    <button id="reset-button">Resetear Tiempo</button>
+                    <button id="change-item-button">Cambiar Elemento</button>
+                </div>
+            </nav>
+
+            <!-- Timer (Clock) Section -->
+            <div id="app"></div> <!-- Timer gets loaded here -->
         </section>
 
-        <!-- Footer Section (From Forty theme) -->
+        <!-- Footer Section -->
         <footer>
             <p>© PictoPlay</p>
         </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script src="script.js"></script> <!-- Your custom script.js -->
 
     <!-- Script for loading screen -->

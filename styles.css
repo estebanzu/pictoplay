@@ -1,6 +1,3 @@
-/* Import Forty Theme base styles */
-@import url('assets/css/main.css');
-
 /* Loading screen styles */
 #loading-screen {
     position: fixed;
