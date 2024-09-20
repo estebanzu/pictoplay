@@ -1,9 +1,10 @@
-/* Import Lato font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+/* Import a similar font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400&display=swap');
+
 
 /* General body styling */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Baloo Bhaina 2', cursive;
     background-color: #1a1a1a;
     color: #FFFFFF;
     text-align: center;
@@ -19,16 +20,27 @@ body {
 }
 
 #logo {
-    width: 200px;
+    width: 100px; /* Reduced logo size to half */
     height: auto;
 }
 
 /* Main Heading */
-h1, h2 {
-    font-weight: 700;
-    color: #FFFFFF;
-    margin: 20px 0;
+h1 {
+    font-size: 5em;
+    letter-spacing: 0.3em;
+    display: inline-block;
 }
+
+/* Add colors to match the uploaded image */
+h1 span:nth-child(1) { color: #F24E63; }  /* P - Red */
+h1 span:nth-child(2) { color: #FFFFFF; }  /* I - Black */
+h1 span:nth-child(3) { color: #F24E63; }  /* C - Red */
+h1 span:nth-child(4) { color: #F5A623; }  /* T - Orange-yellow */
+h1 span:nth-child(5) { color: #F5A623; }  /* O - Orange-yellow */
+h1 span:nth-child(6) { color: #FFFFFF; }  /* P - Black */
+h1 span:nth-child(7) { color: #00B895; }  /* L - Green */
+h1 span:nth-child(8) { color: #FFFFFF; }  /* A - Black */
+h1 span:nth-child(9) { color: #00B895; }  /* Y - Green */
 
 /* Labels */
 label {
