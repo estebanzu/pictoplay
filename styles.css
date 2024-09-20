@@ -1,176 +1,27 @@
-body {
-    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background from the color palette */
-    font-family: 'Comic Sans MS', cursive; /* Playful font */
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 3em; /* Large title */
-    color: #ffffff; /* White text */
-    margin: 20px 0;
-}
-
-label {
-    font-size: 1.5em; /* Size for the label */
-    color: #ffffff; /* White text */
-}
-
-#selector {
-    font-size: 1.5em;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px 0; /* Margin around the dropdown */
-    background-color: #FFD700; /* Yellow background */
-    color: #000000; /* Black text */
-}
-
-#item-name {
-    font-size: 2.5em;
-    background-color: #ffffff; /* White background */
-    color: #00BFFF; /* Light blue text */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-.base-timer {
-    margin: 20px auto; /* Center the timer */
-}
-
-#navbar {
-    background-color: #A349A4; /* Purple background for the navbar */
-    padding: 10px; /* Spacing around the navbar */
-    position: sticky; /* Keep navbar at the top */
-    top: 0; /* Stick to the top of the page */
-    z-index: 1000; /* Ensure it stays above other content */
-}
-
-#button-container {
-    display: flex;
-    justify-content: center; /* Center buttons */
-    margin: 20px 0; /* Margin around the button container */
-}
-
-button {
-    background-color: #40E0D0; /* Cyan color */
-    color: #ffffff; /* Button text color */
-    padding: 15px 25px; /* Padding for buttons */
-    font-size: 1.2em; /* Font size for buttons */
-    margin: 0 10px; /* Space between buttons */
-    border: none; /* No border */
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s; /* Transition for hover effect */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-button:hover {
-    background-color: #00BFFF; /* Light blue on hover */
-}
-
-/* Styles for the timer */
-.base-timer {
-    position: relative; /* Position relative for inner elements */
-    width: 300px; /* Width for the timer */
-    height: 300px; /* Height for the timer */
-    margin: 20px auto; /* Center the timer */
-}
-
-.base-timer__svg {
-    transform: scaleX(-1); /* Flip the SVG */
-}
-
-.base-timer__circle {
-    fill: none; /* No fill for the circle */
-    stroke: none; /* No stroke for the circle */
-}
-
-.base-timer__path-elapsed {
-    stroke-width: 7px; /* Width of the elapsed path */
-    stroke: grey; /* Color of the elapsed path */
-}
-
-.base-timer__path-remaining {
-    stroke-width: 7px; /* Width of the remaining path */
-    stroke-linecap: round; /* Rounded ends for the path */
-    transform: rotate(90deg); /* Start position */
-    transform-origin: center; /* Center the rotation */
-    transition: 1s linear all; /* Smooth transition */
-    fill-rule: nonzero; /* Fill rule */
-    stroke: currentColor; /* Current color for stroke */
-}
-
-.base-timer__path-remaining.green {
-    color: #65BAA3; /* Custom green color for path */
-}
-
-.base-timer__path-remaining.orange {
-    color: #FF69B4; /* Pink for warning */
-}
-
-.base-timer__path-remaining.red {
-    color: #FFD700; /* Yellow for critical */
-}
-
-.base-timer__label {
-    position: absolute; /* Position absolute for label */
-    width: 300px; /* Width for label */
-    height: 300px; /* Height for label */
-    top: 0; /* Align to top */
-    display: flex; /* Flex display */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    font-size: 48px; /* Font size for timer */
-}
-
-#logo-container {
-    text-align: center; /* Center the logo */
-    margin-bottom: 20px; /* Add some space below the logo */
-}
-
-#logo {
-    width: 150px; /* Adjust the size of the logo (reduced) */
-    height: auto;
-    margin-top: 20px; /* Add some space at the top */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em; /* Adjust title size for smaller screens */
-    }
-
-    button {
-        padding: 10px 20px; /* Smaller buttons */
-        font-size: 1em; /* Adjust font size */
-    }
-
-    #item-name {
-        font-size: 2em; /* Adjust item size */
-    }
-}
+/* Import Forty Theme base styles */
+@import url('assets/css/main.css');
 
 /* Loading screen styles */
 #loading-screen {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; /* White background for loading screen */
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it's on top */
+    z-index: 9999; /* On top of everything */
 }
 
 #loading-logo {
-    width: 50%; /* 50% of the page */
+    width: 50%;
     height: auto;
 }
 
+/* General styling for game elements */
 body {
-    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background */
     font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background */
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -182,6 +33,12 @@ h1 {
     margin: 20px 0;
 }
 
+h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
 label {
     font-size: 1.5em;
     color: #ffffff;
@@ -189,32 +46,11 @@ label {
 
 #selector {
     font-size: 1.5em;
+    padding: 10px;
+    background-color: #FFD700; /* Yellow background for dropdown */
+    color: #000;
     border-radius: 5px;
-    padding: 10px;
     margin: 20px 0;
-    background-color: #FFD700;
-    color: #000000;
-}
-
-#item-name {
-    font-size: 2.5em;
-    background-color: #ffffff;
-    color: #00BFFF;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.base-timer {
-    margin: 20px auto;
-}
-
-#navbar {
-    background-color: #A349A4;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 #button-container {
@@ -226,37 +62,36 @@ label {
 button {
     background-color: #40E0D0;
     color: #ffffff;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    margin: 0 10px;
     border: none;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    padding: 15px 25px;
+    font-size: 1.2em;
     cursor: pointer;
+    margin: 0 10px;
 }
 
 button:hover {
     background-color: #00BFFF;
 }
 
-#logo-container {
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-#logo {
-    width: 100px;
-    height: auto;
+/* Clock integration styling */
+.base-timer {
+    margin: 20px auto;
+    position: relative;
+    width: 300px; /* Adjust clock size */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .base-timer__svg {
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* Flip the clock */
 }
 
 .base-timer__path-elapsed {
     stroke-width: 7px;
-    stroke: grey;
+    stroke: grey; /* Grey color for elapsed time */
 }
 
 .base-timer__path-remaining {
@@ -265,19 +100,20 @@ button:hover {
     transform: rotate(90deg);
     transform-origin: center;
     transition: 1s linear all;
+    fill-rule: nonzero;
     stroke: currentColor;
 }
 
 .base-timer__path-remaining.green {
-    color: #65BAA3;
+    color: #65BAA3; /* Green color for healthy time */
 }
 
 .base-timer__path-remaining.orange {
-    color: #FF69B4;
+    color: #FF69B4; /* Pink for warning time */
 }
 
 .base-timer__path-remaining.red {
-    color: #FFD700;
+    color: #FFD700; /* Yellow for critical time */
 }
 
 .base-timer__label {
@@ -289,8 +125,39 @@ button:hover {
     align-items: center;
     justify-content: center;
     font-size: 48px;
+    color: #ffffff; /* White color for clock text */
 }
 
+/* Navbar styling for buttons */
+#navbar {
+    background-color: #A349A4;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo position and size */
+#logo-container {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em;

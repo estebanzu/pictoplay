@@ -1,55 +1,72 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PictoPlay</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PictoPlay - Forty Theme</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Link to Forty theme CSS and your custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="styles.css" /> <!-- Your custom styles -->
 </head>
-<body>
+<body class="is-preload">
+
     <!-- Loading Screen -->
     <div id="loading-screen">
         <img src="logo.png" alt="PictoPlay Logo" id="loading-logo">
     </div>
 
-    <!-- Main Content - Hidden initially -->
+    <!-- Main Content -->
     <div id="main-content" style="display: none;">
-        <h1>PictoPlay</h1>
+        <!-- Banner Section (From Forty theme) -->
 
-        <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
-        <select id="selector">
-            <option value="movies">Películas</option>
-            <option value="animals">Animales</option>
-            <option value="things">Cosas de la Casa</option>
-        </select>
-        <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
-        
-        <div id="app"></div> <!-- This div will contain the timer -->
 
-        <!-- Navbar with buttons -->
-        <nav id="navbar">
-            <div id="button-container">
-                <button id="start-button">Iniciar Tiempo</button>
-                <button id="reset-button">Resetear Tiempo</button>
-                <button id="change-item-button">Cambiar Elemento</button>
+        <!-- Game Section -->
+        <section id="game-section">
+            <div class="inner">
+                
+                <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
+                <select id="selector">
+                    <option value="movies">Películas</option>
+                    <option value="animals">Animales</option>
+                    <option value="things">Cosas de la Casa</option>
+                </select>
+                <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
+
+                <!-- Navbar with buttons -->
+                <nav id="navbar">
+                    <div id="button-container">
+                        <button id="start-button">Iniciar Tiempo</button>
+                        <button id="reset-button">Resetear Tiempo</button>
+                        <button id="change-item-button">Cambiar Elemento</button>
+                    </div>
+                </nav>
+
+                <!-- Timer (Clock) Section -->
+                <div id="app"></div> <!-- Timer gets loaded here -->
             </div>
-        </nav>
+        </section>
 
-        <!-- Audio element for beep sound -->
-        <audio id="beep-sound" src="beep.mp3" preload="auto"></audio>
+        <!-- Footer Section (From Forty theme) -->
+        <footer>
+            <p>© PictoPlay</p>
+        </footer>
     </div>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script> <!-- Your custom script.js -->
+
+    <!-- Script for loading screen -->
     <script>
-        // Loading screen handling
         window.onload = function() {
-            // Hide loading screen and show main content after 3 seconds
             setTimeout(function() {
                 document.getElementById('loading-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
             }, 3000);
         }
     </script>
-
-    <script src="script.js"></script>
 </body>
 </html>
