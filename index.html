@@ -7,35 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
-    <!-- Logo in the top left corner -->
-    <div id="logo-container">
-        <img src="logo.png" alt="PictoPlay Logo" id="logo">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="logo.png" alt="PictoPlay Logo" id="loading-logo">
     </div>
-    <h1>Juego de Pictionary</h1>
 
-    <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
-    <select id="selector">
-        <option value="movies">Películas</option>
-        <option value="animals">Animales</option>
-        <option value="things">Cosas de la Casa</option>
-    </select>
-    <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
-    
-    <div id="app"></div> <!-- This div will contain the timer -->
+    <!-- Main Content - Hidden initially -->
+    <div id="main-content" style="display: none;">
+        <h1>PictoPlay</h1>
 
-    <!-- Navbar with buttons -->
-    <nav id="navbar">
-        <div id="button-container">
-            <button id="start-button">Iniciar Tiempo</button>
-            <button id="reset-button">Resetear Tiempo</button>
-            <button id="change-item-button">Cambiar Elemento</button>
-        </div>
-    </nav>
+        <label for="selector">Selecciona entre películas, animales y cosas de la casa:</label>
+        <select id="selector">
+            <option value="movies">Películas</option>
+            <option value="animals">Animales</option>
+            <option value="things">Cosas de la Casa</option>
+        </select>
+        <h2 id="item">Elemento: <span id="item-name">Presiona iniciar para ver un elemento</span></h2>
+        
+        <div id="app"></div> <!-- This div will contain the timer -->
 
-    <!-- Audio element for beep sound -->
-    <audio id="beep-sound" src="beep.mp3" preload="auto"></audio>
+        <!-- Navbar with buttons -->
+        <nav id="navbar">
+            <div id="button-container">
+                <button id="start-button">Iniciar Tiempo</button>
+                <button id="reset-button">Resetear Tiempo</button>
+                <button id="change-item-button">Cambiar Elemento</button>
+            </div>
+        </nav>
+
+        <!-- Audio element for beep sound -->
+        <audio id="beep-sound" src="beep.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // Loading screen handling
+        window.onload = function() {
+            // Hide loading screen and show main content after 3 seconds
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 3000);
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>

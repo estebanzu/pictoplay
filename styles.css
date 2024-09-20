@@ -150,3 +150,158 @@ button:hover {
         font-size: 2em; /* Adjust item size */
     }
 }
+
+/* Loading screen styles */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* White background for loading screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top */
+}
+
+#loading-logo {
+    width: 50%; /* 50% of the page */
+    height: auto;
+}
+
+body {
+    background: linear-gradient(135deg, #A349A4, #FF69B4, #FFD700, #00BFFF, #40E0D0); /* Gradient background */
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+#selector {
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #FFD700;
+    color: #000000;
+}
+
+#item-name {
+    font-size: 2.5em;
+    background-color: #ffffff;
+    color: #00BFFF;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.base-timer {
+    margin: 20px auto;
+}
+
+#navbar {
+    background-color: #A349A4;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #40E0D0;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00BFFF;
+}
+
+#logo-container {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: #65BAA3;
+}
+
+.base-timer__path-remaining.orange {
+    color: #FF69B4;
+}
+
+.base-timer__path-remaining.red {
+    color: #FFD700;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #item-name {
+        font-size: 2em;
+    }
+}
