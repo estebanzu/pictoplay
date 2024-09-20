@@ -1,7 +1,6 @@
 /* Import a similar font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400&display=swap');
 
-
 /* General body styling */
 body {
     font-family: 'Baloo Bhaina 2', cursive;
@@ -158,6 +157,25 @@ label {
     stroke: #eeeeee;
 }
 
+/* Center the loading screen logo */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    position: fixed; /* Ensure it stays on top */
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a; /* Match your page background */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#loading-logo {
+    width: 200px; /* Reduced logo size */
+    height: auto;
+}
+
 .base-timer__path-remaining {
     stroke-width: 7px;
     stroke-linecap: round;
@@ -196,12 +214,37 @@ footer {
     }
 
     #item-name {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     #selector {
         font-size: 1.2em;
         padding: 10px;
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+        letter-spacing: 0.2em;
+    }
+
+    #logo {
+        width: 80px; /* Further reduce logo size for small screens */
+    }
+
+    #item-name {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .base-timer {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer {
+        font-size: 1em;
     }
 }
